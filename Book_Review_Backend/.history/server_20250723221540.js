@@ -16,9 +16,7 @@ app.use(cors());
 app.use(express.json());
 
 
-mongoose.connect(process.env.MONGO_URL)
-  .then(() => console.log("MongoDB connected"))
-  .catch((err) => console.log("MongoDB connection error:", err));
+
 
 app.use("/api/auth", authRoutes);
 app.use("/api/books", bookRoutes);
